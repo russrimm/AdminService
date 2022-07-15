@@ -5,8 +5,8 @@
     "description": "",
     "version": "1.0"
   },
-  "host": "RIMCO.RUSSRIMMERMAN.COM",
-  "basePath": "/CCM_Proxy_ServerAuth/72057594037927941/AdminService/",
+  "host": "",
+  "basePath": "",
   "schemes": [
     "https"
   ],
