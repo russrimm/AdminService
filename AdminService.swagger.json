@@ -1,0 +1,3382 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "AdminService",
+    "description": "",
+    "version": "1.0"
+  },
+  "host": "RIMCO.RUSSRIMMERMAN.COM",
+  "basePath": "/CCM_Proxy_ServerAuth/72057594037927941/AdminService/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1.0/Device": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "MachineId": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MachineId"
+                      },
+                      "Name": {
+                        "type": "string",
+                        "description": "Name"
+                      },
+                      "CNIsOnline": {
+                        "type": "string",
+                        "description": "CNIsOnline"
+                      },
+                      "IsClient": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "IsClient"
+                      },
+                      "SiteCode": {
+                        "type": "string",
+                        "description": "SiteCode"
+                      },
+                      "ClientActiveStatus": {
+                        "type": "string",
+                        "description": "ClientActiveStatus"
+                      },
+                      "LastDDR": {
+                        "type": "string",
+                        "description": "LastDDR"
+                      },
+                      "LastHardwareScan": {
+                        "type": "string",
+                        "description": "LastHardwareScan"
+                      },
+                      "LastSoftwareScan": {
+                        "type": "string",
+                        "description": "LastSoftwareScan"
+                      },
+                      "LastMPServerName": {
+                        "type": "string",
+                        "description": "LastMPServerName"
+                      },
+                      "LastActiveTime": {
+                        "type": "string",
+                        "description": "LastActiveTime"
+                      },
+                      "ADSiteName": {
+                        "type": "string",
+                        "description": "ADSiteName"
+                      },
+                      "LastClientCheckTime": {
+                        "type": "string",
+                        "description": "LastClientCheckTime"
+                      },
+                      "Domain": {
+                        "type": "string",
+                        "description": "Domain"
+                      },
+                      "ClientVersion": {
+                        "type": "string",
+                        "description": "ClientVersion"
+                      },
+                      "DeviceOS": {
+                        "type": "string",
+                        "description": "DeviceOS"
+                      },
+                      "DeviceOSBuild": {
+                        "type": "string",
+                        "description": "DeviceOSBuild"
+                      },
+                      "PrimaryUser": {
+                        "type": "string",
+                        "description": "PrimaryUser"
+                      },
+                      "CurrentLogonUser": {
+                        "type": "string",
+                        "description": "CurrentLogonUser"
+                      },
+                      "ClientState": {
+                        "type": "string",
+                        "description": "ClientState"
+                      },
+                      "AADDeviceID": {
+                        "type": "string",
+                        "description": "AADDeviceID"
+                      },
+                      "SMSID": {
+                        "type": "string",
+                        "description": "SMSID"
+                      },
+                      "ClientCertType": {
+                        "type": "string",
+                        "description": "ClientCertType"
+                      },
+                      "MACAddress": {
+                        "type": "string",
+                        "description": "MACAddress"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Devices",
+        "description": "Get Devices",
+        "operationId": "GetDevices",
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/Device{DeviceID}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "MachineId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "MachineId"
+                },
+                "ArchitectureKey": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ArchitectureKey"
+                },
+                "Name": {
+                  "type": "string",
+                  "description": "Name"
+                },
+                "SMSID": {
+                  "type": "string",
+                  "description": "SMSID"
+                },
+                "SiteCode": {
+                  "type": "string",
+                  "description": "SiteCode"
+                },
+                "Domain": {
+                  "type": "string",
+                  "description": "Domain"
+                },
+                "ClientEdition": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ClientEdition"
+                },
+                "ClientType": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ClientType"
+                },
+                "ClientVersion": {
+                  "type": "string",
+                  "description": "ClientVersion"
+                },
+                "IsClient": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "IsClient"
+                },
+                "IsObsolete": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "IsObsolete"
+                },
+                "IsActive": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "IsActive"
+                },
+                "IsVirtualMachine": {
+                  "type": "boolean",
+                  "description": "IsVirtualMachine"
+                },
+                "IsAOACCapable": {
+                  "type": "boolean",
+                  "description": "IsAOACCapable"
+                },
+                "DeviceOwner": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "DeviceOwner"
+                },
+                "DeviceCategory": {
+                  "type": "string",
+                  "description": "DeviceCategory"
+                },
+                "WipeStatus": {
+                  "type": "string",
+                  "description": "WipeStatus"
+                },
+                "RetireStatus": {
+                  "type": "string",
+                  "description": "RetireStatus"
+                },
+                "SyncNowStatus": {
+                  "type": "string",
+                  "description": "SyncNowStatus"
+                },
+                "LastSyncNowRequest": {
+                  "type": "string",
+                  "description": "LastSyncNowRequest"
+                },
+                "ManagementAuthority": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ManagementAuthority"
+                },
+                "AMTStatus": {
+                  "type": "string",
+                  "description": "AMTStatus"
+                },
+                "AMTFullVersion": {
+                  "type": "string",
+                  "description": "AMTFullVersion"
+                },
+                "SuppressAutoProvision": {
+                  "type": "string",
+                  "description": "SuppressAutoProvision"
+                },
+                "IsApproved": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "IsApproved"
+                },
+                "IsBlocked": {
+                  "type": "boolean",
+                  "description": "IsBlocked"
+                },
+                "IsAlwaysInternet": {
+                  "type": "boolean",
+                  "description": "IsAlwaysInternet"
+                },
+                "IsInternetEnabled": {
+                  "type": "boolean",
+                  "description": "IsInternetEnabled"
+                },
+                "ClientCertType": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ClientCertType"
+                },
+                "UserName": {
+                  "type": "string",
+                  "description": "UserName"
+                },
+                "LastClientCheckTime": {
+                  "type": "string",
+                  "description": "LastClientCheckTime"
+                },
+                "ClientCheckPass": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ClientCheckPass"
+                },
+                "ADSiteName": {
+                  "type": "string",
+                  "description": "ADSiteName"
+                },
+                "UserDomainName": {
+                  "type": "string",
+                  "description": "UserDomainName"
+                },
+                "ADLastLogonTime": {
+                  "type": "string",
+                  "description": "ADLastLogonTime"
+                },
+                "ClientRemediationSuccess": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ClientRemediationSuccess"
+                },
+                "ClientActiveStatus": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ClientActiveStatus"
+                },
+                "LastStatusMessage": {
+                  "type": "string",
+                  "description": "LastStatusMessage"
+                },
+                "LastPolicyRequest": {
+                  "type": "string",
+                  "description": "LastPolicyRequest"
+                },
+                "LastDDR": {
+                  "type": "string",
+                  "description": "LastDDR"
+                },
+                "LastHardwareScan": {
+                  "type": "string",
+                  "description": "LastHardwareScan"
+                },
+                "LastSoftwareScan": {
+                  "type": "string",
+                  "description": "LastSoftwareScan"
+                },
+                "LastMPServerName": {
+                  "type": "string",
+                  "description": "LastMPServerName"
+                },
+                "LastActiveTime": {
+                  "type": "string",
+                  "description": "LastActiveTime"
+                },
+                "CP_Status": {
+                  "type": "string",
+                  "description": "CP_Status"
+                },
+                "CP_LatestProcessingAttempt": {
+                  "type": "string",
+                  "description": "CP_LatestProcessingAttempt"
+                },
+                "CP_LastInstallationError": {
+                  "type": "string",
+                  "description": "CP_LastInstallationError"
+                },
+                "EAS_DeviceID": {
+                  "type": "string",
+                  "description": "EAS_DeviceID"
+                },
+                "DeviceOS": {
+                  "type": "string",
+                  "description": "DeviceOS"
+                },
+                "DeviceOSBuild": {
+                  "type": "string",
+                  "description": "DeviceOSBuild"
+                },
+                "DeviceType": {
+                  "type": "string",
+                  "description": "DeviceType"
+                },
+                "ExchangeServer": {
+                  "type": "string",
+                  "description": "ExchangeServer"
+                },
+                "ExchangeOrganization": {
+                  "type": "string",
+                  "description": "ExchangeOrganization"
+                },
+                "PolicyApplicationStatus": {
+                  "type": "string",
+                  "description": "PolicyApplicationStatus"
+                },
+                "LastSuccessSyncTimeUTC": {
+                  "type": "string",
+                  "description": "LastSuccessSyncTimeUTC"
+                },
+                "PhoneNumber": {
+                  "type": "string",
+                  "description": "PhoneNumber"
+                },
+                "DeviceAccessState": {
+                  "type": "string",
+                  "description": "DeviceAccessState"
+                },
+                "EP_DeploymentState": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "EP_DeploymentState"
+                },
+                "EP_DeploymentErrorCode": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "EP_DeploymentErrorCode"
+                },
+                "EP_DeploymentDescription": {
+                  "type": "string",
+                  "description": "EP_DeploymentDescription"
+                },
+                "EP_PolicyApplicationState": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "EP_PolicyApplicationState"
+                },
+                "EP_PolicyApplicationErrorCode": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "EP_PolicyApplicationErrorCode"
+                },
+                "EP_PolicyApplicationDescription": {
+                  "type": "string",
+                  "description": "EP_PolicyApplicationDescription"
+                },
+                "EP_Enabled": {
+                  "type": "boolean",
+                  "description": "EP_Enabled"
+                },
+                "EP_ClientVersion": {
+                  "type": "string",
+                  "description": "EP_ClientVersion"
+                },
+                "EP_ProductStatus": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "EP_ProductStatus"
+                },
+                "EP_EngineVersion": {
+                  "type": "string",
+                  "description": "EP_EngineVersion"
+                },
+                "EP_AntivirusEnabled": {
+                  "type": "boolean",
+                  "description": "EP_AntivirusEnabled"
+                },
+                "EP_AntivirusSignatureVersion": {
+                  "type": "string",
+                  "description": "EP_AntivirusSignatureVersion"
+                },
+                "EP_AntivirusSignatureUpdateDateTime": {
+                  "type": "string",
+                  "description": "EP_AntivirusSignatureUpdateDateTime"
+                },
+                "EP_AntispywareEnabled": {
+                  "type": "boolean",
+                  "description": "EP_AntispywareEnabled"
+                },
+                "EP_AntispywareSignatureVersion": {
+                  "type": "string",
+                  "description": "EP_AntispywareSignatureVersion"
+                },
+                "EP_AntispywareSignatureUpdateDateTime": {
+                  "type": "string",
+                  "description": "EP_AntispywareSignatureUpdateDateTime"
+                },
+                "EP_LastFullScanDateTimeStart": {
+                  "type": "string",
+                  "description": "EP_LastFullScanDateTimeStart"
+                },
+                "EP_LastFullScanDateTimeEnd": {
+                  "type": "string",
+                  "description": "EP_LastFullScanDateTimeEnd"
+                },
+                "EP_LastQuickScanDateTimeStart": {
+                  "type": "string",
+                  "description": "EP_LastQuickScanDateTimeStart"
+                },
+                "EP_LastQuickScanDateTimeEnd": {
+                  "type": "string",
+                  "description": "EP_LastQuickScanDateTimeEnd"
+                },
+                "EP_InfectionStatus": {
+                  "type": "string",
+                  "description": "EP_InfectionStatus"
+                },
+                "EP_PendingFullScan": {
+                  "type": "string",
+                  "description": "EP_PendingFullScan"
+                },
+                "EP_PendingReboot": {
+                  "type": "string",
+                  "description": "EP_PendingReboot"
+                },
+                "EP_PendingManualSteps": {
+                  "type": "string",
+                  "description": "EP_PendingManualSteps"
+                },
+                "EP_PendingOfflineScan": {
+                  "type": "string",
+                  "description": "EP_PendingOfflineScan"
+                },
+                "EP_LastInfectionTime": {
+                  "type": "string",
+                  "description": "EP_LastInfectionTime"
+                },
+                "EP_LastThreatName": {
+                  "type": "string",
+                  "description": "EP_LastThreatName"
+                },
+                "CNIsOnline": {
+                  "type": "boolean",
+                  "description": "CNIsOnline"
+                },
+                "CNLastOnlineTime": {
+                  "type": "string",
+                  "description": "CNLastOnlineTime"
+                },
+                "CNLastOfflineTime": {
+                  "type": "string",
+                  "description": "CNLastOfflineTime"
+                },
+                "CNAccessMP": {
+                  "type": "string",
+                  "description": "CNAccessMP"
+                },
+                "CNIsOnInternet": {
+                  "type": "boolean",
+                  "description": "CNIsOnInternet"
+                },
+                "ClientState": {
+                  "type": "string",
+                  "description": "ClientState"
+                },
+                "Unknown": {
+                  "type": "boolean",
+                  "description": "Unknown"
+                },
+                "ATP_LastConnected": {
+                  "type": "string",
+                  "description": "ATP_LastConnected"
+                },
+                "ATP_SenseIsRunning": {
+                  "type": "string",
+                  "description": "ATP_SenseIsRunning"
+                },
+                "ATP_OnboardingState": {
+                  "type": "string",
+                  "description": "ATP_OnboardingState"
+                },
+                "ATP_OrgId": {
+                  "type": "string",
+                  "description": "ATP_OrgId"
+                },
+                "CA_IsCompliant": {
+                  "type": "string",
+                  "description": "CA_IsCompliant"
+                },
+                "CA_ComplianceSetTime": {
+                  "type": "string",
+                  "description": "CA_ComplianceSetTime"
+                },
+                "CA_ComplianceEvalTime": {
+                  "type": "string",
+                  "description": "CA_ComplianceEvalTime"
+                },
+                "CA_ErrorDetails": {
+                  "type": "string",
+                  "description": "CA_ErrorDetails"
+                },
+                "CA_ErrorLocation": {
+                  "type": "string",
+                  "description": "CA_ErrorLocation"
+                },
+                "AADTenantID": {
+                  "type": "string",
+                  "description": "AADTenantID"
+                },
+                "AADDeviceID": {
+                  "type": "string",
+                  "description": "AADDeviceID"
+                },
+                "PasscodeResetState": {
+                  "type": "string",
+                  "description": "PasscodeResetState"
+                },
+                "PasscodeResetStateTimeStamp": {
+                  "type": "string",
+                  "description": "PasscodeResetStateTimeStamp"
+                },
+                "RemoteLockState": {
+                  "type": "string",
+                  "description": "RemoteLockState"
+                },
+                "RemoteLockStateTimeStamp": {
+                  "type": "string",
+                  "description": "RemoteLockStateTimeStamp"
+                },
+                "ActivationLockBypassState": {
+                  "type": "string",
+                  "description": "ActivationLockBypassState"
+                },
+                "ActivationLockBypassStateTimeStamp": {
+                  "type": "string",
+                  "description": "ActivationLockBypassStateTimeStamp"
+                },
+                "ActivationLockState": {
+                  "type": "string",
+                  "description": "ActivationLockState"
+                },
+                "IsSupervised": {
+                  "type": "string",
+                  "description": "IsSupervised"
+                },
+                "DeviceThreatLevel": {
+                  "type": "string",
+                  "description": "DeviceThreatLevel"
+                },
+                "SerialNumber": {
+                  "type": "string",
+                  "description": "SerialNumber"
+                },
+                "IMEI": {
+                  "type": "string",
+                  "description": "IMEI"
+                },
+                "PrimaryUser": {
+                  "type": "string",
+                  "description": "PrimaryUser"
+                },
+                "CurrentLogonUser": {
+                  "type": "string",
+                  "description": "CurrentLogonUser"
+                },
+                "LastLogonUser": {
+                  "type": "string",
+                  "description": "LastLogonUser"
+                },
+                "MACAddress": {
+                  "type": "string",
+                  "description": "MACAddress"
+                },
+                "SMBIOSGUID": {
+                  "type": "string",
+                  "description": "SMBIOSGUID"
+                },
+                "CoManaged": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "CoManaged"
+                },
+                "IsMDMActive": {
+                  "type": "string",
+                  "description": "IsMDMActive"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Device",
+        "description": "Get Device",
+        "operationId": "GetDevice",
+        "parameters": [
+          {
+            "name": "DeviceID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/Collections": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "SiteID": {
+                        "type": "string",
+                        "description": "SiteID"
+                      },
+                      "CollectionID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CollectionID"
+                      },
+                      "CollectionName": {
+                        "type": "string",
+                        "description": "CollectionName"
+                      },
+                      "Flags": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Flags"
+                      },
+                      "ResultTableName": {
+                        "type": "string",
+                        "description": "ResultTableName"
+                      },
+                      "CollectionComment": {
+                        "type": "string",
+                        "description": "CollectionComment"
+                      },
+                      "Schedule": {
+                        "type": "string",
+                        "description": "Schedule"
+                      },
+                      "SourceLocaleID": {
+                        "type": "string",
+                        "description": "SourceLocaleID"
+                      },
+                      "LastChangeTime": {
+                        "type": "string",
+                        "description": "LastChangeTime"
+                      },
+                      "LastRefreshRequest": {
+                        "type": "string",
+                        "description": "LastRefreshRequest"
+                      },
+                      "CollectionType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CollectionType"
+                      },
+                      "LimitToCollectionID": {
+                        "type": "string",
+                        "description": "LimitToCollectionID"
+                      },
+                      "IsReferenceCollection": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "IsReferenceCollection"
+                      },
+                      "BeginDate": {
+                        "type": "string",
+                        "description": "BeginDate"
+                      },
+                      "EvaluationStartTime": {
+                        "type": "string",
+                        "description": "EvaluationStartTime"
+                      },
+                      "LastRefreshTime": {
+                        "type": "string",
+                        "description": "LastRefreshTime"
+                      },
+                      "LastIncrementalRefreshTime": {
+                        "type": "string",
+                        "description": "LastIncrementalRefreshTime"
+                      },
+                      "LastMemberChangeTime": {
+                        "type": "string",
+                        "description": "LastMemberChangeTime"
+                      },
+                      "CurrentStatus": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CurrentStatus"
+                      },
+                      "CurrentStatusTime": {
+                        "type": "string",
+                        "description": "CurrentStatusTime"
+                      },
+                      "LimitToCollectionName": {
+                        "type": "string",
+                        "description": "LimitToCollectionName"
+                      },
+                      "ISVData": {
+                        "type": "string",
+                        "description": "ISVData"
+                      },
+                      "ISVString": {
+                        "type": "string",
+                        "description": "ISVString"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Collections",
+        "description": "Get Collections",
+        "operationId": "GetCollections",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_Collection": {},
+    "/wmi/SMS_G_System_INSTALLED_SOFTWARE": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InstallDate": {
+                        "type": "string",
+                        "description": "InstallDate"
+                      },
+                      "ProductName": {
+                        "type": "string",
+                        "description": "ProductName"
+                      },
+                      "ProductVersion": {
+                        "type": "string",
+                        "description": "ProductVersion"
+                      },
+                      "Publisher": {
+                        "type": "string",
+                        "description": "Publisher"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Installed Software",
+        "description": "Installed Software",
+        "operationId": "InstalledSoftware",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_StatMsgWithInsStrings": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "Component": {
+                        "type": "string",
+                        "description": "Component"
+                      },
+                      "InsString1": {
+                        "type": "string",
+                        "description": "InsString1"
+                      },
+                      "InsString10": {
+                        "type": "string",
+                        "description": "InsString10"
+                      },
+                      "InsString2": {
+                        "type": "string",
+                        "description": "InsString2"
+                      },
+                      "InsString3": {
+                        "type": "string",
+                        "description": "InsString3"
+                      },
+                      "InsString4": {
+                        "type": "string",
+                        "description": "InsString4"
+                      },
+                      "InsString5": {
+                        "type": "string",
+                        "description": "InsString5"
+                      },
+                      "InsString6": {
+                        "type": "string",
+                        "description": "InsString6"
+                      },
+                      "InsString7": {
+                        "type": "string",
+                        "description": "InsString7"
+                      },
+                      "InsString8": {
+                        "type": "string",
+                        "description": "InsString8"
+                      },
+                      "InsString9": {
+                        "type": "string",
+                        "description": "InsString9"
+                      },
+                      "MachineName": {
+                        "type": "string",
+                        "description": "MachineName"
+                      },
+                      "MessageID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MessageID"
+                      },
+                      "MessageType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MessageType"
+                      },
+                      "ModuleName": {
+                        "type": "string",
+                        "description": "ModuleName"
+                      },
+                      "PerClient": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "PerClient"
+                      },
+                      "ProcessID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ProcessID"
+                      },
+                      "RecordID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "RecordID"
+                      },
+                      "ReportFunction": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ReportFunction"
+                      },
+                      "ResourceID": {
+                        "type": "string",
+                        "description": "ResourceID"
+                      },
+                      "Severity": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Severity"
+                      },
+                      "SiteCode": {
+                        "type": "string",
+                        "description": "SiteCode"
+                      },
+                      "SuccessfulTransaction": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "SuccessfulTransaction"
+                      },
+                      "ThreadID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ThreadID"
+                      },
+                      "Time": {
+                        "type": "string",
+                        "description": "Time"
+                      },
+                      "TopLevelSiteCode": {
+                        "type": "string",
+                        "description": "TopLevelSiteCode"
+                      },
+                      "Transaction": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Transaction"
+                      },
+                      "Win32Error": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Win32Error"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Status Messages",
+        "description": "Get Status Messages",
+        "operationId": "GetStatusMessages",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    "/v1.0/Script": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ScriptName": {
+                        "type": "string",
+                        "description": "ScriptName"
+                      },
+                      "ScriptGuid": {
+                        "type": "string",
+                        "description": "ScriptGuid"
+                      },
+                      "LastUpdateTime": {
+                        "type": "string",
+                        "description": "LastUpdateTime"
+                      },
+                      "ScriptVersion": {
+                        "type": "string",
+                        "description": "ScriptVersion"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "List Scripts",
+        "description": "List Scripts",
+        "operationId": "ListScripts",
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/Device({ResourceID})/AdminService.RunScript": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Run Script",
+        "description": "Run Script",
+        "operationId": "RunScript",
+        "parameters": [
+          {
+            "name": "ResourceID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ScriptGuid": {
+                  "type": "string",
+                  "description": "ScriptGuid"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_Collection('{CollrectionID}')": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "CollectionID": {
+                        "type": "string",
+                        "description": "CollectionID"
+                      },
+                      "CollectionType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CollectionType"
+                      },
+                      "CollectionVariablesCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CollectionVariablesCount"
+                      },
+                      "Comment": {
+                        "type": "string",
+                        "description": "Comment"
+                      },
+                      "CurrentStatus": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CurrentStatus"
+                      },
+                      "FullEvaluationLastRefreshTime": {
+                        "type": "string",
+                        "description": "FullEvaluationLastRefreshTime"
+                      },
+                      "FullEvaluationMemberChanges": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "FullEvaluationMemberChanges"
+                      },
+                      "FullEvaluationMemberChangeTime": {
+                        "type": "string",
+                        "description": "FullEvaluationMemberChangeTime"
+                      },
+                      "FullEvaluationNextRefreshTime": {
+                        "type": "string",
+                        "description": "FullEvaluationNextRefreshTime"
+                      },
+                      "FullEvaluationRunTime": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "FullEvaluationRunTime"
+                      },
+                      "HasProvisionedMember": {
+                        "type": "boolean",
+                        "description": "HasProvisionedMember"
+                      },
+                      "IncludeExcludeCollectionsCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "IncludeExcludeCollectionsCount"
+                      },
+                      "IncrementalEvaluationLastRefreshTime": {
+                        "type": "string",
+                        "description": "IncrementalEvaluationLastRefreshTime"
+                      },
+                      "IncrementalEvaluationMemberChanges": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "IncrementalEvaluationMemberChanges"
+                      },
+                      "IncrementalEvaluationMemberChangeTime": {
+                        "type": "string",
+                        "description": "IncrementalEvaluationMemberChangeTime"
+                      },
+                      "IncrementalEvaluationRunTime": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "IncrementalEvaluationRunTime"
+                      },
+                      "IsBuiltIn": {
+                        "type": "boolean",
+                        "description": "IsBuiltIn"
+                      },
+                      "IsReferenceCollection": {
+                        "type": "boolean",
+                        "description": "IsReferenceCollection"
+                      },
+                      "ISVData": {
+                        "type": "string",
+                        "description": "ISVData"
+                      },
+                      "ISVDataSize": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ISVDataSize"
+                      },
+                      "ISVString": {
+                        "type": "string",
+                        "description": "ISVString"
+                      },
+                      "LastChangeTime": {
+                        "type": "string",
+                        "description": "LastChangeTime"
+                      },
+                      "LastMemberChangeTime": {
+                        "type": "string",
+                        "description": "LastMemberChangeTime"
+                      },
+                      "LastRefreshTime": {
+                        "type": "string",
+                        "description": "LastRefreshTime"
+                      },
+                      "LimitToCollectionID": {
+                        "type": "string",
+                        "description": "LimitToCollectionID"
+                      },
+                      "LimitToCollectionName": {
+                        "type": "string",
+                        "description": "LimitToCollectionName"
+                      },
+                      "LocalMemberCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LocalMemberCount"
+                      },
+                      "MemberClassName": {
+                        "type": "string",
+                        "description": "MemberClassName"
+                      },
+                      "MemberCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MemberCount"
+                      },
+                      "MonitoringFlags": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MonitoringFlags"
+                      },
+                      "Name": {
+                        "type": "string",
+                        "description": "Name"
+                      },
+                      "ObjectPath": {
+                        "type": "string",
+                        "description": "ObjectPath"
+                      },
+                      "OwnedByThisSite": {
+                        "type": "boolean",
+                        "description": "OwnedByThisSite"
+                      },
+                      "PowerConfigsCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "PowerConfigsCount"
+                      },
+                      "RefreshType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "RefreshType"
+                      },
+                      "ReplicateToSubSites": {
+                        "type": "boolean",
+                        "description": "ReplicateToSubSites"
+                      },
+                      "ServicePartners": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ServicePartners"
+                      },
+                      "ServiceWindowsCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ServiceWindowsCount"
+                      },
+                      "UseCluster": {
+                        "type": "string",
+                        "description": "UseCluster"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      },
+                      "CollectionRules": {
+                        "type": "array",
+                        "items": {},
+                        "description": "CollectionRules"
+                      },
+                      "RefreshSchedule": {
+                        "type": "array",
+                        "items": {},
+                        "description": "RefreshSchedule"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Collection",
+        "description": "Get Collection",
+        "operationId": "GetCollection",
+        "parameters": [
+          {
+            "name": "CollrectionID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/Device({DeviceID})/AvailableApplications": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "@odata.count": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "@odata.count"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Username": {
+                        "type": "string",
+                        "description": "Username"
+                      },
+                      "Application": {
+                        "type": "object",
+                        "properties": {
+                          "ModelName": {
+                            "type": "string",
+                            "description": "ModelName"
+                          },
+                          "DisplayName": {
+                            "type": "string",
+                            "description": "DisplayName"
+                          },
+                          "AdminComments": {
+                            "type": "string",
+                            "description": "AdminComments"
+                          },
+                          "SoftwareVersion": {
+                            "type": "string",
+                            "description": "SoftwareVersion"
+                          },
+                          "Manufacturer": {
+                            "type": "string",
+                            "description": "Manufacturer"
+                          }
+                        },
+                        "description": "Application"
+                      },
+                      "States": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "AppState": {
+                              "type": "string",
+                              "description": "AppState"
+                            },
+                            "Username": {
+                              "type": "string",
+                              "description": "Username"
+                            },
+                            "LastUpdateTime": {
+                              "type": "string",
+                              "description": "LastUpdateTime"
+                            }
+                          }
+                        },
+                        "description": "States"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Available Apps",
+        "description": "Get Available Apps",
+        "operationId": "GetAvailableApps",
+        "parameters": [
+          {
+            "name": "DeviceID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "$expand",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_ApplicationRequest.CreateApprovedRequest": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "ReturnValue": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ReturnValue"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Install Application",
+        "description": "Install Application",
+        "operationId": "InstallApplication",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ApplicationId": {
+                  "type": "string",
+                  "description": "ApplicationId"
+                },
+                "ClientGUID": {
+                  "type": "string",
+                  "description": "ClientGUID"
+                },
+                "Username": {
+                  "type": "string",
+                  "description": "Username"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/Device(16777266)/Events": {},
+    "/v1.0/Device({resourceid})/Events": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "@odata.count": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "@odata.count"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ID"
+                      },
+                      "InternalType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "InternalType"
+                      },
+                      "ClientItemKey": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ClientItemKey"
+                      },
+                      "LogName": {
+                        "type": "string",
+                        "description": "LogName"
+                      },
+                      "ProviderName": {
+                        "type": "string",
+                        "description": "ProviderName"
+                      },
+                      "ProviderGuid": {
+                        "type": "string",
+                        "description": "ProviderGuid"
+                      },
+                      "EventID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "EventID"
+                      },
+                      "EventIdQualifiers": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "EventIdQualifiers"
+                      },
+                      "Version": {
+                        "type": "string",
+                        "description": "Version"
+                      },
+                      "Level": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Level"
+                      },
+                      "Task": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Task"
+                      },
+                      "Opcode": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Opcode"
+                      },
+                      "Keywords": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Keywords"
+                      },
+                      "TimeCreatedSystemTime": {
+                        "type": "string",
+                        "description": "TimeCreatedSystemTime"
+                      },
+                      "EventRecordID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "EventRecordID"
+                      },
+                      "ActivityID": {
+                        "type": "string",
+                        "description": "ActivityID"
+                      },
+                      "RelatedActivityID": {
+                        "type": "string",
+                        "description": "RelatedActivityID"
+                      },
+                      "Channel": {
+                        "type": "string",
+                        "description": "Channel"
+                      },
+                      "UserSID": {
+                        "type": "string",
+                        "description": "UserSID"
+                      },
+                      "EventDataXML": {
+                        "type": "string",
+                        "description": "EventDataXML"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Events Start",
+        "description": "Get Events Start",
+        "operationId": "GetEventsStart",
+        "parameters": [
+          {
+            "name": "resourceid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "$top",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "$count",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_ClientOperation.InitiateClientOperation": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "OperationID": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "OperationID"
+                },
+                "ReturnValue": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "ReturnValue"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Client Operation",
+        "description": "Client Operation",
+        "operationId": "ClientOperation",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "TargetResourceIDs": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "description": "TargetResourceIDs"
+                },
+                "Type": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Type"
+                },
+                "RandomizationWindow": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "RandomizationWindow"
+                },
+                "TargetCollectionID": {
+                  "type": "string",
+                  "description": "TargetCollectionID"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_DeploymentSummary": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "ApplicationName": {
+                        "type": "string",
+                        "description": "ApplicationName"
+                      },
+                      "AssignmentID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "AssignmentID"
+                      },
+                      "CI_ID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CI_ID"
+                      },
+                      "CollectionID": {
+                        "type": "string",
+                        "description": "CollectionID"
+                      },
+                      "CollectionName": {
+                        "type": "string",
+                        "description": "CollectionName"
+                      },
+                      "CollectionType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "CollectionType"
+                      },
+                      "CreationTime": {
+                        "type": "string",
+                        "description": "CreationTime"
+                      },
+                      "DeploymentID": {
+                        "type": "string",
+                        "description": "DeploymentID"
+                      },
+                      "DeploymentIntent": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "DeploymentIntent"
+                      },
+                      "DeploymentTime": {
+                        "type": "string",
+                        "description": "DeploymentTime"
+                      },
+                      "DesiredConfigType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "DesiredConfigType"
+                      },
+                      "EnforcementDeadline": {
+                        "type": "string",
+                        "description": "EnforcementDeadline"
+                      },
+                      "FeatureType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "FeatureType"
+                      },
+                      "ModelName": {
+                        "type": "string",
+                        "description": "ModelName"
+                      },
+                      "ModificationTime": {
+                        "type": "string",
+                        "description": "ModificationTime"
+                      },
+                      "NumberErrors": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberErrors"
+                      },
+                      "NumberInProgress": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberInProgress"
+                      },
+                      "NumberOther": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberOther"
+                      },
+                      "NumberSuccess": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberSuccess"
+                      },
+                      "NumberTargeted": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberTargeted"
+                      },
+                      "NumberUnknown": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberUnknown"
+                      },
+                      "ObjectTypeID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ObjectTypeID"
+                      },
+                      "PackageID": {
+                        "type": "string",
+                        "description": "PackageID"
+                      },
+                      "PolicyModelID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "PolicyModelID"
+                      },
+                      "ProgramName": {
+                        "type": "string",
+                        "description": "ProgramName"
+                      },
+                      "RequireApproval": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "RequireApproval"
+                      },
+                      "SecuredObjectId": {
+                        "type": "string",
+                        "description": "SecuredObjectId"
+                      },
+                      "SoftwareName": {
+                        "type": "string",
+                        "description": "SoftwareName"
+                      },
+                      "SummarizationTime": {
+                        "type": "string",
+                        "description": "SummarizationTime"
+                      },
+                      "SummaryType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "SummaryType"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Deployment Summary",
+        "description": "Deployment Summary",
+        "operationId": "DeploymentSummary",
+        "parameters": []
+      }
+    },
+    "/wmi/SMS_ClassicDeploymentAssetDetails": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "CollectionID": {
+                        "type": "string",
+                        "description": "CollectionID"
+                      },
+                      "CollectionName": {
+                        "type": "string",
+                        "description": "CollectionName"
+                      },
+                      "DeploymentID": {
+                        "type": "string",
+                        "description": "DeploymentID"
+                      },
+                      "DeviceID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "DeviceID"
+                      },
+                      "DeviceName": {
+                        "type": "string",
+                        "description": "DeviceName"
+                      },
+                      "IsMachineAssignedToUser": {
+                        "type": "boolean",
+                        "description": "IsMachineAssignedToUser"
+                      },
+                      "IsMachineChangesPersisted": {
+                        "type": "boolean",
+                        "description": "IsMachineChangesPersisted"
+                      },
+                      "IsVM": {
+                        "type": "boolean",
+                        "description": "IsVM"
+                      },
+                      "MessageID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MessageID"
+                      },
+                      "PackageID": {
+                        "type": "string",
+                        "description": "PackageID"
+                      },
+                      "PackageName": {
+                        "type": "string",
+                        "description": "PackageName"
+                      },
+                      "ProgramName": {
+                        "type": "string",
+                        "description": "ProgramName"
+                      },
+                      "StatusDescription": {
+                        "type": "string",
+                        "description": "StatusDescription"
+                      },
+                      "StatusType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "StatusType"
+                      },
+                      "SummarizationTime": {
+                        "type": "string",
+                        "description": "SummarizationTime"
+                      },
+                      "UserName": {
+                        "type": "string",
+                        "description": "UserName"
+                      },
+                      "VMHostName": {
+                        "type": "string",
+                        "description": "VMHostName"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Package Deployment Details",
+        "description": "Package Deployment Details",
+        "operationId": "PackageDeployment",
+        "parameters": []
+      }
+    },
+    "/v1.0/Device({DeviceID})/AdminService.RunCMPivot": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "ScriptParams": {
+                      "type": "string",
+                      "description": "ScriptParams"
+                    },
+                    "OperationId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "OperationId"
+                    },
+                    "Properties": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Name": {
+                            "type": "string",
+                            "description": "Name"
+                          },
+                          "Units": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "Units"
+                          },
+                          "Type": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "Type"
+                          },
+                          "Source": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "Source"
+                          },
+                          "CalculatedTableOperator": {
+                            "type": "string",
+                            "description": "CalculatedTableOperator"
+                          }
+                        }
+                      },
+                      "description": "Properties"
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "CMPivot - SoftwareUpdate",
+        "description": "CMPivot - Software Update",
+        "operationId": "CMPivot.SoftwareUpdate",
+        "parameters": [
+          {
+            "name": "DeviceID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "InputQuery": {
+                  "type": "string",
+                  "description": "InputQuery"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/Device({DeviceID})/AdminService.CMPivotResult(OperationId={OperationID})": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "Status": {
+                      "type": "string",
+                      "description": "Status"
+                    },
+                    "MoreResult": {
+                      "type": "boolean",
+                      "description": "MoreResult"
+                    },
+                    "Result": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Title": {
+                            "type": "string",
+                            "description": "Title"
+                          },
+                          "UpdateId": {
+                            "type": "string",
+                            "description": "UpdateId"
+                          },
+                          "KBArticleIDs": {
+                            "type": "string",
+                            "description": "KBArticleIDs"
+                          },
+                          "SecurityBulletinIDs": {
+                            "type": "string",
+                            "description": "SecurityBulletinIDs"
+                          },
+                          "Categories": {
+                            "type": "string",
+                            "description": "Categories"
+                          },
+                          "Device": {
+                            "type": "string",
+                            "description": "Device"
+                          }
+                        }
+                      },
+                      "description": "Result"
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "CMPivot SoftwareUpdate Results",
+        "description": "CMPivot SoftwareUpdate Results",
+        "operationId": "CMPivot.SoftwareUpdate.Results",
+        "parameters": [
+          {
+            "name": "DeviceID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "OperationID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/Device({ResourceID})/AdminService.ScriptResult(OperationId={OperationID})": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "Status": {
+                      "type": "string",
+                      "description": "Status"
+                    },
+                    "MoreResult": {
+                      "type": "boolean",
+                      "description": "MoreResult"
+                    },
+                    "Result": {
+                      "type": "string",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ScriptOutput": {
+                            "type": "string",
+                            "items": {
+                              "type": "array"
+                            },
+                            "description": "ScriptOutput"
+                          }
+                        }
+                      },
+                      "description": "Result"
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Run Script Result",
+        "description": "Run Script Result",
+        "operationId": "RunScriptResult",
+        "parameters": [
+          {
+            "name": "ResourceID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "OperationID",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_Client_ComanagementState": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "AADDeviceID": {
+                        "type": "string",
+                        "description": "AADDeviceID"
+                      },
+                      "AADJoined": {
+                        "type": "boolean",
+                        "description": "AADJoined"
+                      },
+                      "Authority": {
+                        "type": "string",
+                        "description": "Authority"
+                      },
+                      "ComgmtPolicyPresent": {
+                        "type": "boolean",
+                        "description": "ComgmtPolicyPresent"
+                      },
+                      "EnrollmentErrorDetail": {
+                        "type": "string",
+                        "description": "EnrollmentErrorDetail"
+                      },
+                      "EnrollmentFailed": {
+                        "type": "boolean",
+                        "description": "EnrollmentFailed"
+                      },
+                      "EnrollmentScheduled": {
+                        "type": "boolean",
+                        "description": "EnrollmentScheduled"
+                      },
+                      "EnrollmentStatusCode": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "EnrollmentStatusCode"
+                      },
+                      "HybridAADJoined": {
+                        "type": "boolean",
+                        "description": "HybridAADJoined"
+                      },
+                      "MDMEnrolled": {
+                        "type": "boolean",
+                        "description": "MDMEnrolled"
+                      },
+                      "MDMProvisioned": {
+                        "type": "boolean",
+                        "description": "MDMProvisioned"
+                      },
+                      "MDMWorkloads": {
+                        "type": "string",
+                        "description": "MDMWorkloads"
+                      },
+                      "Name": {
+                        "type": "string",
+                        "description": "Name"
+                      },
+                      "PendingLogon": {
+                        "type": "boolean",
+                        "description": "PendingLogon"
+                      },
+                      "ResourceID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ResourceID"
+                      },
+                      "SiteCode": {
+                        "type": "string",
+                        "description": "SiteCode"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get CoManagement Workload",
+        "description": "Get CoManagement Workload",
+        "operationId": "GetCoMgmtWorkload",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_G_System_SYSTEMBOOTDATA": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "BiosDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "BiosDuration"
+                      },
+                      "BootDiskMediaType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "BootDiskMediaType"
+                      },
+                      "BootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "BootDuration"
+                      },
+                      "EventLogStart": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "EventLogStart"
+                      },
+                      "GPDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "GPDuration"
+                      },
+                      "GroupID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "GroupID"
+                      },
+                      "OSVersion": {
+                        "type": "string",
+                        "description": "OSVersion"
+                      },
+                      "ResourceID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ResourceID"
+                      },
+                      "RevisionID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "RevisionID"
+                      },
+                      "SystemStartTime": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "SystemStartTime"
+                      },
+                      "TimeStamp": {
+                        "type": "string",
+                        "description": "TimeStamp"
+                      },
+                      "UpdateDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "UpdateDuration"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "System Boot Data",
+        "description": "System Boot Data",
+        "operationId": "SystemBootData",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_G_System_SYSTEMBOOTSUMMARY": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "AverageBootFrequency": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "AverageBootFrequency"
+                      },
+                      "GroupID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "GroupID"
+                      },
+                      "LatestBiosDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LatestBiosDuration"
+                      },
+                      "LatestBootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LatestBootDuration"
+                      },
+                      "LatestCoreBootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LatestCoreBootDuration"
+                      },
+                      "LatestEventLogStart": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LatestEventLogStart"
+                      },
+                      "LatestGPDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LatestGPDuration"
+                      },
+                      "LatestUpdateDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "LatestUpdateDuration"
+                      },
+                      "MaxBiosDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MaxBiosDuration"
+                      },
+                      "MaxBootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MaxBootDuration"
+                      },
+                      "MaxCoreBootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MaxCoreBootDuration"
+                      },
+                      "MaxEventLogStart": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MaxEventLogStart"
+                      },
+                      "MaxGPDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MaxGPDuration"
+                      },
+                      "MaxUpdateDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MaxUpdateDuration"
+                      },
+                      "MedianBiosDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MedianBiosDuration"
+                      },
+                      "MedianBootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MedianBootDuration"
+                      },
+                      "MedianCoreBootDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MedianCoreBootDuration"
+                      },
+                      "MedianEventLogStart": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MedianEventLogStart"
+                      },
+                      "MedianGPDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MedianGPDuration"
+                      },
+                      "MedianUpdateDuration": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "MedianUpdateDuration"
+                      },
+                      "ResourceID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ResourceID"
+                      },
+                      "RevisionID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "RevisionID"
+                      },
+                      "TimeStamp": {
+                        "type": "string",
+                        "description": "TimeStamp"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "System Boot Summary",
+        "description": "System Boot Summary",
+        "operationId": "SystemBootSummary",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/wmi/SMS_DistributionJob": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "Action": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Action"
+                      },
+                      "CreationTime": {
+                        "type": "string",
+                        "description": "CreationTime"
+                      },
+                      "DPID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "DPID"
+                      },
+                      "DynamicOrder": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "DynamicOrder"
+                      },
+                      "JobID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "JobID"
+                      },
+                      "LastUpdateTime": {
+                        "type": "string",
+                        "description": "LastUpdateTime"
+                      },
+                      "NALPath": {
+                        "type": "string",
+                        "description": "NALPath"
+                      },
+                      "PackageVersion": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "PackageVersion"
+                      },
+                      "PkgID": {
+                        "type": "string",
+                        "description": "PkgID"
+                      },
+                      "RemainingSize": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "RemainingSize"
+                      },
+                      "ReStartTime": {
+                        "type": "string",
+                        "description": "ReStartTime"
+                      },
+                      "RetryCount": {
+                        "type": "string",
+                        "description": "RetryCount"
+                      },
+                      "StartTime": {
+                        "type": "string",
+                        "description": "StartTime"
+                      },
+                      "State": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "State"
+                      },
+                      "TotalSize": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "TotalSize"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Distribution Jobs",
+        "description": "Get Distribution Jobs",
+        "operationId": "GetDistributionJobs",
+        "parameters": []
+      }
+    },
+    "/wmi/SMS_ObjectContentExtraInfo": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@odata.etag": {
+                        "type": "string",
+                        "description": "@odata.etag"
+                      },
+                      "__LAZYPROPERTIES": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__LAZYPROPERTIES"
+                      },
+                      "__QUALIFIER_SECURITYVERBS": {
+                        "type": "string",
+                        "description": "__QUALIFIER_SECURITYVERBS"
+                      },
+                      "DateCreated": {
+                        "type": "string",
+                        "description": "DateCreated"
+                      },
+                      "Description": {
+                        "type": "string",
+                        "description": "Description"
+                      },
+                      "FeatureType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "FeatureType"
+                      },
+                      "LastUpdateDate": {
+                        "type": "string",
+                        "description": "LastUpdateDate"
+                      },
+                      "NumberErrors": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberErrors"
+                      },
+                      "NumberInProgress": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberInProgress"
+                      },
+                      "NumberSuccess": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberSuccess"
+                      },
+                      "NumberUnknown": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "NumberUnknown"
+                      },
+                      "ObjectID": {
+                        "type": "string",
+                        "description": "ObjectID"
+                      },
+                      "ObjectType": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ObjectType"
+                      },
+                      "ObjectTypeID": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "ObjectTypeID"
+                      },
+                      "PackageID": {
+                        "type": "string",
+                        "description": "PackageID"
+                      },
+                      "SoftwareName": {
+                        "type": "string",
+                        "description": "SoftwareName"
+                      },
+                      "SourceSite": {
+                        "type": "string",
+                        "description": "SourceSite"
+                      },
+                      "SourceSize": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "SourceSize"
+                      },
+                      "SourceVersion": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "SourceVersion"
+                      },
+                      "Targeted": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Targeted"
+                      },
+                      "__GENUS": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__GENUS"
+                      },
+                      "__CLASS": {
+                        "type": "string",
+                        "description": "__CLASS"
+                      },
+                      "__SUPERCLASS": {
+                        "type": "string",
+                        "description": "__SUPERCLASS"
+                      },
+                      "__DYNASTY": {
+                        "type": "string",
+                        "description": "__DYNASTY"
+                      },
+                      "__RELPATH": {
+                        "type": "string",
+                        "description": "__RELPATH"
+                      },
+                      "__PROPERTY_COUNT": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "__PROPERTY_COUNT"
+                      },
+                      "__DERIVATION": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "__DERIVATION"
+                      },
+                      "__SERVER": {
+                        "type": "string",
+                        "description": "__SERVER"
+                      },
+                      "__NAMESPACE": {
+                        "type": "string",
+                        "description": "__NAMESPACE"
+                      },
+                      "__PATH": {
+                        "type": "string",
+                        "description": "__PATH"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Object Content Extra Info",
+        "description": "Object Content Extra Info",
+        "operationId": "ObjectContentExtraInfo",
+        "parameters": []
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.microsoftonline.com/common/oauth2/token",
+      "scopes": {}
+    }
+  },
+  "security": [
+    {
+      "oauth2_auth": []
+    }
+  ],
+  "tags": []
+}
